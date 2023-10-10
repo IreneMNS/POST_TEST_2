@@ -2,9 +2,6 @@
 import os
 os.system('cls')
 
-print('===============KOSAN MERENE================')
-print('=============Welcome to our kosan==========')
-
 from prettytable import PrettyTable
 
 #Tabel Kosan
@@ -38,7 +35,6 @@ def update_table(id, tipe, harga):
         if row["id"] == id:
             row["tipe"] = tipe
             row["harga"] = harga
-            row["ketersediaan"] = ketersediaan
             print(f"Data dengan ID {id} berhasil diupdate.")
             return
     print(f"Data dengan ID {id} tidak ditemukan.")
@@ -78,16 +74,16 @@ def transaksi_pembelian():
     print(f"Total harga{Total_harga}")
 
 # Program utama
-if __name__ == "__Renren__":
-    my_PIN = "Cegilasli"
+if __name__ == "__main__":
+    Password = "admini"
 
 while True:
     Option = input('Anda masuk sebagai?(Admin/User):')
 
     if Option == 'Admin':
         Kode = input('Masukkan Kode Admin:')
-        if Kode != my_PIN:
-            print("Maaf anda tak bisa masuk")
+        if Kode != Password : 
+            print('wah ada yang salah')
             continue
 
         #Program Utama Admin
@@ -115,9 +111,9 @@ while True:
             elif pilihan == "3":
                 id = int(input("Masukkan ID yang akan diupdate: "))
                 tipe = input("Masukkan Tipe Kosan baru: ")
-                harga = int(input("Masukkan Harga per Hari baru: "))
+                harga = int(input("Masukkan Harga per Bulan baru: "))
                 ketersediaan = int(input('Masukkan sisa kosong: '))
-                update_table(id, tipe, harga,ketersediaan)
+                update_table(id, tipe, harga)
 
             elif pilihan == "4":
                 id = int(input("Masukkan ID yang akan dihapus: "))
@@ -128,8 +124,7 @@ while True:
 
             else:
                 print("Pilihan tidak valid. Coba lagi.")
-                break
-            
+                
 
     elif Option == 'User':
         print("Selamat datang di program transaksi!")
@@ -145,7 +140,7 @@ while True:
             transaksi_pembelian()
         elif Option_user == "2":
             print("Terima kasih! Sampai jumpa.")
-            break
+
         else:
             print("Inputan yang anda masukkan salah")
         break
