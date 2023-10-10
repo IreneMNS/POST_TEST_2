@@ -180,4 +180,7 @@ Untuk gamabar di atas ini adalah sebuah output untuk program USER
 
 
 
+BERIKUT ADALAH FLOWCHART:
+![POST TEST CRUD](https://github.com/IreneMNS/POST_TEST_2/assets/144671469/69f2403f-1d55-49e4-b05b-fef44e036e16)
+
     
